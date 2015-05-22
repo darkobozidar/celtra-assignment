@@ -1,0 +1,58 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html ng-app="adCreatorApp">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>AdCreator</title>
+
+    {# Fonts #}
+    <link href="http://fonts.googleapis.com/css?family=Tenor+Sans&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    {# Style Sheets #}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body ng-controller="folderAdCtrl">
+    {% verbatim %}
+    <div class="error" ng-show="data.error">
+        <p>{{ data.error }}</p>
+    </div>
+
+    <div ng-hide="data.error">
+        <h1 id="current-folder-name">{{ data.folder.name }}</h1>
+
+        <button ng-click="reloadData(data.folder.parent.url)" ng-show="data.folder.parent" class="btn-back">
+            <
+        </button>
+
+        <h3 ng-show="data.folder.children.length == 0 && data.folder.ads.length == 0" id="empty-folder-msg">
+            This folder is empty.
+        </h3>
+
+        <div ng-show="data.folder">
+            <ul class="folder-choices" ng-show="data.folder.children.length">
+                <li ng-repeat="folder in data.folder.children">
+                    <button ng-click="reloadData(folder.url)">
+                        {{ folder.name }}
+                    </button>
+                </li>
+            </ul>
+            <ul class="ad-choices" ng-show="data.folder.ads.length">
+                <li ng-repeat="ad in data.folder.ads">
+                    <a href="{{ ad.ad_url }}" target="_blank">{{ ad.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% endverbatim %}
+
+    {% block scripts %}
+        <script type="text/javascript" src="{% static 'js/lib/angular.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/adCreatorApp.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

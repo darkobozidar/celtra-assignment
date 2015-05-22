@@ -1,0 +1,110 @@
+* {
+    .border-box;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%!important;
+    background: #F0F0F0;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    font-family: 'Tenor Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 80px;
+    padding: 30px 0;
+}
+
+h3 {
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+button {
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Tenor Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.btn-back {
+    font-size: 65px;
+    position: fixed;
+    left: 6px;
+    top: 8px;
+    padding: 25px 40px;
+    background: black;
+    color: white;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.btn-back:hover {
+    cursor: pointer;
+}
+
+.folder-choices {
+    width: 100%;
+    margin: 0 5px 10px 5px;
+    text-align: center;
+}
+
+.folder-choices button {
+    width: 100%;
+    padding: 30px;
+    font-size: 45px;
+    font-family: 'Tenor Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    background: #393939;
+    color: #E2E2E2;
+    border: 2px solid #E2E2E2;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.folder-choices button:hover {
+    cursor: pointer;
+}
+
+.ad-choices li {
+    margin: 0 5px 10px 5px;
+    background: white;
+    border: 2px solid #A2A2A2;
+    text-align: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.ad-choices a {
+    width: 100%;
+    padding: 25px;
+    font-size: 40px;
+    font-family: 'Tenor Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #A2A2A2;
+    display: block;
+}
+
+.error {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Tenor Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+}
